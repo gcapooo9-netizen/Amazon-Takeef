@@ -3,7 +3,7 @@ name: Run Amazon Price Tracker
 on:
   schedule:
     - cron: '*/30 * * * *'  # بيشتغل تلقائياً كل 30 دقيقة
-  workflow_dispatch:        # عشان تقدر تشغله يدوياً من زرار Run workflow
+  workflow_dispatch:        # زرار للتشغيل اليدوي من جيت هاب
 
 jobs:
   run-bot:
@@ -24,4 +24,5 @@ jobs:
         pip install requests cloudscraper beautifulsoup4
 
     - name: Run bot script
-      run: python bot.py
+      run: python Tracker.py
+      
